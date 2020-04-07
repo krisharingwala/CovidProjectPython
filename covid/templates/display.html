@@ -1,0 +1,174 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>COVID-19 Gujarat</title>
+     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    
+</head>
+
+<body>
+       
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="{% static 'icon.png' %}" alt="logo" class="icon"></a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="" data-tooltip="I’m the tooltip text.">Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+      <div class="row mt-4">
+            <div class="col-12"><h5 class="text-center">GUJARAT COVID-19 TRACKER</h5></div>
+     </div>
+      <div class="row mt-3">
+        <div class="col-md-4 col-sm-12 dashboard-status">
+            <div class="card pull-up text-red border">
+                <div class="card-body dashboard-count">
+                    <div class="media d-flex position-relative">
+                        <div class="media-right-icon align-self-center">
+                            <h3 id="TotalConfirmed" class="count text-red">  {{totInceseCount}} <svg xmlns="http://www.w3.org/2000/svg" class="is-cherry" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                                {{totCount}}</h3>
+                        </div>
+                        <div class="media-body text-right">
+                            <h5 class="desc">Confirmed Positive Cases</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 dashboard-status">
+            <div class="card pull-up text-success border">
+                <div class="card-body dashboard-count">
+                    <div class="media d-flex position-relative">
+                        <div class="media-right-icon align-self-center">
+                            <h3 id="Totalrecovered" class="count text-success">{{recoverCount}}</h3>
+                        </div>
+                        <div class="media-body text-right">
+                            <h5 class="desc">Patients Recovered</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12 dashboard-status">
+            <div class="card pull-up text-black border">
+                <div class="card-body dashboard-count">
+                    <div class="media d-flex position-relative">
+                        <div class="media-right-icon align-self-center">
+                            <h3 id="TotalDeath" class="count " style="color:black">{{deathCount}}</h3>
+                        </div>
+                        <div class="media-body text-right">
+                            <h5 class="desc">Total Deaths</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div >
+            <center>
+                <table class="table1 table-sm table-responsive table-striped" id="coviddata">
+                    <thead>
+                      <tr>
+                        <th class="sticky state-heading">
+                            <div class="heading-content">
+                                DISRTICT
+                            </div>
+                        </th>
+                        <th class="sticky">
+                            <div class="heading-content">
+                                <span class="is-cherry" title="Confirmed">Confirmed</span>
+                            </div>
+                        </th>
+                        <th class="sticky">
+                            <div class="heading-content">
+                                <span class="is-blue" title="Active">Active</span>
+                            </div>
+                        </th>
+                        <th class="sticky">
+                            <div class="heading-content">
+                                <span class="is-green" title="Recovered">Recovered</span>
+                            </div>
+                        </th>
+                        <th class="sticky">
+                            <div class="heading-content">
+                                <span class="is-gray" title="Deceased">Deceased</span>
+                            </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {% for d in data %}
+                        <tr>
+                        
+                         {%for i in d %}
+                         
+                           <td td class='text-center'>
+                                {% if forloop.counter == 2 %}
+                                        {% for key, value in increseDict.items %}
+                                            {% if d.0 == key %}
+                                            <span class="is-cherry">{{value}}</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="is-cherry" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                                                
+                                            {% endif %}
+                                        {% endfor %}                                   
+                                        {{i}}
+                                {% else %}
+                                {{i}}
+                            {% endif %}
+                       
+                           </td>
+                           
+                        {% endfor %}
+                       </tr> 
+                       {% endfor %}
+                    </tbody>
+                  </table>
+                 
+              </center>	
+        </div>
+        
+        <div  >
+            <div class="map">
+            <img src="{% static 'gujmap.png' %}" class="img-thumbnail" alt="" />
+            {% for key,value in mapData.items %}
+                {% if value > 10 %}                       
+                <div id="{{key}}" class="box" style="background-image: url('http://www.clker.com/cliparts/W/0/g/a/W/E/map-pin-red-md.png');"><span class="mapText" style=" background-color:aliceblue;color:red;font-weight: bold;">{{value}}</span>
+                   
+                </div>
+                {% else %}
+                <div id="{{key}}" class="box" style="background-image: url('http://www.clker.com/cliparts/9/y/P/8/E/5/map-pin-green-md.png');"><span class="mapText" style=" background-color:aliceblue;color:red;font-weight: bold;">{{value}}</span>
+                  
+                </div>
+                {% endif %}
+            {% endfor %}
+            
+         
+           
+           </div>
+        </div>
+        <div class="container-fluid bg-dark text-white text-center" style="font-size: 14px;">
+            &copy; krisha ringwala 2020 <span class="float-right">Design By : krisha Ringwala</span>
+        </div>
+</div> 
+</div>
+</body>
+</html>

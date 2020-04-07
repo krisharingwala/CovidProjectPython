@@ -1,0 +1,355 @@
+.icon
+{
+	width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-right: -1rem;
+    cursor: pointer;
+}
+
+.map {
+  margin:10px;
+  position: relative;
+  display: inline-block;
+
+}
+
+.map img {
+  max-width:100%;
+  display: block;
+}
+
+.box {
+  width:8%;
+  height:8%;
+  
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.marker-green
+{
+    background-image:   url(http://www.clker.com/cliparts/9/y/P/8/E/5/map-pin-green-md.png);
+}
+
+#Kachchh {
+  top:24%;
+  left:22%;
+}
+
+#Banaskantha {
+  top:4%;
+  left:60%;
+}
+
+#Mahesana {
+  top:20%;
+  left:65%;
+}
+
+#Patan {
+  top:17%;
+  left:55%;
+}
+
+#sabankantha {
+  top:20%;
+  left:72%;
+}
+
+#aravali {
+  top:20%;
+  left:77%;
+}
+
+#Rajkot {
+  top:55%;
+  left:36%;
+}
+
+#Morbi {
+  top:35%;
+  left:40%;
+}
+
+#Surendranagar {
+  top:35%;
+  left:50%;
+}
+
+#Porbandar {
+   top:57%;
+  left:23%;
+}
+
+#dwarka {
+  top:50%;
+  left:20%;
+}
+
+#Junagadh {
+  top:65%;
+  left:30%;
+}
+
+#Amreli {
+  top:65%;
+  left:45%
+}
+
+#somnath {
+  top:72%;
+  left:38%
+}
+
+#Bhavnagar {
+  top:65%;
+  left:55%
+}
+
+#Botad {
+  top:50%;
+  left:50%
+}
+
+#Jamnagar {
+  top:45%;
+  left:30%
+}
+
+#Ahmadabad {
+  top:35%;
+  left:60%
+}
+
+#Kheda {
+  top:32%;
+  left:70%
+}
+
+#Gandhinagar{
+  top:25%;
+  left:65%
+}
+
+#Anand {
+  top:43%;
+  left:65%
+}
+
+#Mahisagar {
+  top:28%;
+  left:80%
+}
+
+#panchmahal {
+  top:40%;
+  left:80%
+}
+
+#Dahod {
+  top:35%;
+  left:90%
+}
+
+#Vadodara {
+  top:45%;
+  left:73%
+}
+
+
+#chotaudaipur {
+  top:45%;
+  left:85%
+}
+
+#Narmada {
+  top:55%;
+  left:80%
+}
+
+#Bharuch {
+  top:56%;
+  left:70%
+}
+
+#Surat {
+  top:66%;
+  left:70%
+}
+
+#Tapi {
+  top:70%;
+  left:78%
+}
+
+#Dang {
+  top:75%;
+  left:82%
+}
+
+#Navsari {
+  top:75%;
+  left:75%
+}
+
+#Valsad {
+  top:85%;
+  left:75%
+}
+
+.box:hover > .pin-text {
+  display: block;
+  z-index: 1000;
+}
+
+.pin-text {
+  position: absolute;
+  top:50%;
+  transform:translateY(-50%);
+  left:75%;
+  white-space:nowrap;
+  display: none;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+.pin-text h3 {
+    color:white;
+    text-shadow: 1px 1px 1px #000;
+}
+
+
+.table1{position:relative;align-self:center;font-family:"archia";text-transform:uppercase;margin-bottom:1rem;border-spacing:3px 2px;border-collapse:separate}
+.table1 thead{background:rgba(108,117,125,.0627451);color:#343a40;text-align:left;font-size:.75rem}
+.table1 thead th{padding:.5rem;cursor:pointer;border-radius:5px;transition:all .1s ease-in-out;z-index:99}
+.table1 thead th.sticky{top:4px;background:#f1f1f1}
+.table1 thead th:hover{background:#ecedee}
+.table1 thead th .heading-content{display:flex;justify-content:space-between;position:relative;flex-direction:row;height:.9rem;align-items:center}
+.table1 thead th .heading-content abbr{text-align:right}
+.table1 thead th .heading-content svg{width:10px;right:0;stroke-width:4px;margin:.15rem 0 0 .25rem;color:rgba(108,117,125,.6)}
+.table1 tbody{color:#6c757d;max-width:10rem}
+.table1 tbody tr{transition:background .1s ease-in-out;cursor:pointer}
+.table1 tbody tr:hover{background:rgba(108,117,125,.12549)}
+.table1 tbody tr.divider{height:.5rem;background:rgba(108,117,125,.06)!important}
+.table1 tbody tr.spacer{height:.5rem;background:#fff!important}
+.table1 tbody td{padding:.25rem;font-size:.9rem;border-radius:5px;text-align:right}
+.table1 tbody td .deltas{margin-right:.25rem;font-size:11px!important}
+.table1 tbody td .deltas svg{width:9px;height:9px;stroke-width:3;vertical-align:-.25px}
+.table1 tbody td:first-child{text-align:left;max-width:7.5rem;word-wrap:break-word}
+.table1 tbody .state-last-update{background:transparent;transform:translateX(1rem)}
+.table1 tbody .state-last-update:hover{background:#fff!important}
+.table1 tbody .state-last-update td .last-update{text-align:left;display:flex;flex-direction:row;align-items:baseline;width:100%}
+.table1 tbody .district-heading{transform:translateX(1rem);background:rgba(108,117,125,.0627451)}
+.table1 tbody .district-heading td{font-size:.75rem;font-weight:900;padding:.45rem;color:#343a40;background:rgba(108,117,125,.0627451)}
+.table1 tbody .district-heading td .heading-content{display:flex;justify-content:space-between;position:relative;flex-direction:row;height:.9rem;align-items:center}
+.table1 tbody .district-heading td .heading-content abbr{text-align:right}
+.table1 tbody .district-heading td .heading-content svg{width:10px;right:0;stroke-width:4px;margin:.15rem 0 0 .25rem;color:rgba(108,117,125,.6)}
+.table1 tbody .district{transform:translateX(1rem)}
+.table1 .affected-count{position:absolute;margin:0;top:-1rem;color:rgba(108,117,125,.6);right:0}
+.table1 .is-total td{background:rgba(108,117,125,.12549)}
+.table1 .dropdown{position:absolute;left:-.75rem;background:rgba(108,117,125,.0627451);border-radius:50%;width:13px;height:13px;margin-top:.5rem;cursor:pointer;transition:background .2s ease-in-out}
+.table1 .dropdown:hover{background:rgba(108,117,125,.12549)}
+.table1 .dropdown svg{position:absolute;top:-.35rem;left:1px;width:11px;stroke-width:3}
+.a
+{
+  text-decoration: none;
+}
+.is-cherry{color:#ff073a;}
+.is-blue{color:#007bff;}
+.is-green{color:#28a745}
+.is-gray{color:#6c757d}
+
+
+
+
+.dashboard-status {
+  position: relative;
+}
+.dashboard-status .card {
+  position: relative;
+  margin-bottom: 20px;
+}
+.dashboard-status .card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: url("icon-corona.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+  opacity: 0.05;
+}
+.dashboard-status .card {
+  box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07);
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+.dashboard-status .card > .card-body {
+  padding: 10px;
+}
+.pull-up {
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.pull-up:hover {
+  -webkit-transform: translateY(-4px) scale(1.02);
+  -moz-transform: translateY(-4px) scale(1.02);
+  -ms-transform: translateY(-4px) scale(1.02);
+  -o-transform: translateY(-4px) scale(1.02);
+  transform: translateY(-4px) scale(1.02);
+  -webkit-box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2);
+  box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2);
+  z-index: 30;
+}
+.count {
+  font-size: 36px;
+  font-weight: 600;
+}
+.desc {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.desc + p {
+  font-size: 16px;
+}
+.media-right-icon {
+  font-size: 44px;
+  color: rgba(255, 255, 255, 0.95);
+  /* text-shadow: 0 4px rgba(0, 0, 0, 0.35); */
+  transition: 0.8s all ease;
+  -webkit-transition: 0.8s all ease;
+  -moz-transition: 0.8s all ease;
+  -ms-transition: 0.8s all ease;
+  -o-transition: 0.8s all ease;
+}
+.pull-up:hover > .card-content > .card-body > .media > .media-right-icon {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+}
+
+.text-red {
+  color: #f56954 !important;
+}
+
+.text-orange {
+  color: #ff851b !important;
+}
+
+.text-blue {
+  color: #0073b7 !important;
+}
